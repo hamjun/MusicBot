@@ -111,7 +111,6 @@ export default class CreateRoomPage extends Component {
                     Back
                 </Button>
             </Grid>
-            
         </Grid>;
     }
 }
