@@ -121,12 +121,12 @@ const Room = props => {
     }
     return (
         <Grid container spacing={1}>
+            <MusicPlayer {...song}/>
             <Grid item xs={12} align="center">
-                <Typography variant="h4" component="h4">
+                <Typography component="h4" variant="subtitle2">
                     Code = {roomCode}
                 </Typography>
             </Grid>
-            <MusicPlayer {...song}/>
             {isHost ? renderSettingsButton : null}
             <Grid item xs={12} align="center">
                 <Button color="secondary" variant="contained" onClick={leaveButtonPressed}>

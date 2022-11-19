@@ -108,7 +108,17 @@ class CurrentSong(APIView):
             room.current_song = song_id
             room.save(update_fields=['current_song'])
             votes = Vote.objects.filter(room=room).delete()
+       
+class PrevSong(APIView):
+    def post(self, request, format=None):
+        room_code = self.request.session.get('room_code')
+        room = Room.objects.filter(code=room_code)[0] 
         
+        if self.request.session.session_key == room.host:
+            prev_song(room.host)
+            
+        return Response({}, status.HTTP_204_NO_CONTENT)
+            
 class PauseSong(APIView):
     def put(self, request, format=None):
         room_code = self.request.session.get('room_code')
