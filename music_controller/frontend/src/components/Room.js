@@ -15,9 +15,9 @@ const Room = props => {
     const { roomCode } = useParams();
 
     const navigate = useNavigate();
-
+    
     useEffect(() => {
-        const interval = setInterval(getCurrentSong, 1500);
+        const interval = setInterval(getCurrentSong, 1000);
         return () => clearInterval(interval);
     }, []);
 

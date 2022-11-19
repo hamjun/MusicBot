@@ -25,8 +25,7 @@ SECRET_KEY = 'django-insecure-rocl%=90$mf#eiiy_gt2pf8(jx*3cn(30_q&9@7#m7pken)o)t
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
-
+ALLOWED_HOSTS = ['0.0.0.0', '127.0.0.1']
 
 # Application definition
 
